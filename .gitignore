@@ -1,3 +1,6 @@
 /output/ocr_gan_aug/metal_nut/train/weights/*
 /lib/data/mvtec_anomaly_detection/
 /lib/data/mvtec_anomaly_detection.zip
+/lib/data/mvtec_anomaly_detection_org/
+/lib/data/mvtec_anomaly_detection_org.zip
+/output/

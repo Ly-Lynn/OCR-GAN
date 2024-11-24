@@ -1,6 +1,6 @@
 ##
 import importlib
-
+import torch
 ##
 def load_model(opt, dataloader,classes):
     """ Load model based on the model name.
@@ -16,4 +16,4 @@ def load_model(opt, dataloader,classes):
     model_path = f"lib.models.{model_name}"
     model_lib  = importlib.import_module(model_path)
     model = getattr(model_lib, model_name.title())
-    return model(opt, dataloader, classes)
+    return torch.nn.DataParallel(model(opt, dataloader, classes))
